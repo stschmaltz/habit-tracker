@@ -1,0 +1,15 @@
+<div local-class="container">
+
+  <nav local-class="nav-bar__navigation">
+    <div local-class="nav-bar__inner-container" id="main-navbar">
+      <ul local-class="nav-bar__nav-list">
+        {{#link-to "index" tagName="li"}}<a href="">Home</a>{{/link-to}}
+        {{#link-to "placeholder" tagName="li"}}<a href="">Placeholder</a>{{/link-to}}
+        {{#link-to "settings" tagName="li"}}<a href="">Settings</a>{{/link-to}}
+      </ul>
+    </div>
+  </nav>
+
+
+  {{outlet}}
+</div>
