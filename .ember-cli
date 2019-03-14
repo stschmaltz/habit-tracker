@@ -1,5 +1,5 @@
 {
   "disableAnalytics": false,
-
+  "allowEmpty": true,
   "usePods": true
 }
