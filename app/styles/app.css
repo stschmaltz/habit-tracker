@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: rgb(240, 240, 240);
+  --primary-blue: #4897d8;
+
+  --primary-font: 'Lato';
+  --secondary-font: 'Montserrat';
+}
