@@ -7,9 +7,11 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     googleFonts: ['Lato:300,400,700', 'Montserrat:400'],
-    contentSecurityPolicy: {
-      'font-src': "'self' fonts.gstatic.com",
-      'style-src': "'self' fonts.googleapis.com",
+    firebase: {
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+      databaseURL: process.env.FIREBASE_DB_URL,
+      storageBucket: process.env.FIREBASE_SB_URL,
     },
     EmberENV: {
       FEATURES: {
