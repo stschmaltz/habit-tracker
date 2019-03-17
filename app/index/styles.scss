@@ -1,4 +1,22 @@
 .habits_container {
-  padding: 1rem;
+  padding: 0 2rem;
   border: solid 1px #222;
+}
+
+.habits_title-container {
+  display: flex;
+
+}
+
+.habit_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.habit_check-container {
+}
+
+.habit_check-icon {
+  padding: 0 0.2rem;
 }
