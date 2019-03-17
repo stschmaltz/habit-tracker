@@ -5,11 +5,7 @@
     {{fa-icon "plus" local-class="nav-bar__plus" click=(action "toggleModal")}}
     {{fa-icon "bars" local-class="nav-bar__hamburger"}}
     {{#if isShowingModal}}
-    {{#add-new-habit-dialog
-      onClose=(action "toggleModal")
-  }}
-    Hi there!
-    {{/add-new-habit-dialog}}
+      {{add-new-habit-dialog onClose=(action "toggleModal") }}
     {{/if}}
   </div>
 </div>
