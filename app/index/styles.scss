@@ -1,13 +1,20 @@
 .habits_container {
+  font-family: montserrat;
+
   padding: 0 2rem;
   border: solid 1px #222;
 }
 
 .habits_title-container {
   display: flex;
-
+  align-items: center;
+  justify-content: space-between;
 }
-
+.habit_check-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .habit_container {
   display: flex;
   align-items: center;
@@ -16,7 +23,9 @@
 
 .habit_check-container {
 }
-
+.habit_date {
+  padding: 0 0.15rem;
+}
 .habit_check-icon {
   padding: 0 0.2rem;
 }
