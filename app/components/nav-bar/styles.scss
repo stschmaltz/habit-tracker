@@ -1,16 +1,12 @@
-.container {
-  width: 100%;
-}
-
 .nav-bar__underneath {
   height: 70px;
 }
 
 .nav-bar__container {
+  max-width: 1440px;
+  top: 0;
   height: 70px;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
