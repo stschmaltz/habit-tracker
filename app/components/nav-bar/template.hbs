@@ -6,9 +6,7 @@
     {{fa-icon "bars" local-class="nav-bar__hamburger"}}
     {{#if isShowingModal}}
     {{#add-new-habit-dialog
-      onClose="toggleModal"
-      targetAttachment="center"
-      translucentOverlay=true
+      onClose=(action "toggleModal")
   }}
     Hi there!
     {{/add-new-habit-dialog}}

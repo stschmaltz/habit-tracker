@@ -10,7 +10,6 @@ export default Component.extend({
       const newHabit = await this.store.createRecord('habit').randomize(name);
 
       const response = await newHabit.save();
-      console.log(response);
       alert(`new habit: ${response.get('id')}`);
     },
   },
