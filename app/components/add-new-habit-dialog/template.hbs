@@ -4,6 +4,20 @@
       targetAttachment="center"
       translucentOverlay=true
 }}
-    Hi there!
+  <div local-class="add-new-habit-dialog_container">
+    <h2>Add a habit</h2>
+    {{#paper-form onSubmit=(action "addHabit") as |form|}}
+    <div class="layout-column">
+      <div class="layout-row flex-50">
+        {{form.input label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
+      </div>
+      {{form.input type="number" label="Frequency" value=frequency onChange=(action (mut frequency)) min=1 max=7 required=true}}
+    </div>
+    <div class="layout-row">
+      {{#form.submit-button raised=true primary=true}}Add Habit{{/form.submit-button}}
+    </div>
+    {{/paper-form}}
+
+  </div>
   {{/modal-dialog}}
 </div>

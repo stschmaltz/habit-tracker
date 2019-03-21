@@ -1,5 +1,6 @@
-@import 'ember-modal-dialog/ember-modal-structure';
-@import 'ember-modal-dialog/ember-modal-appearance';
+@import "ember-paper";
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
 
 html,
 body {
@@ -16,6 +17,6 @@ body {
   --black: rgb(20, 20, 20);
   --primary-blue: #4897d8;
 
-  --primary-font: 'Lato';
-  --secondary-font: 'Montserrat';
+  --primary-font: "Lato";
+  --secondary-font: "Montserrat";
 }
