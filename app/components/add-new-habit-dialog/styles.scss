@@ -1,10 +1,11 @@
+@import "ember-paper";
 .add-new-habit-dialog_container {
   width: 80vw;
   padding: 1rem;
 }
 
 .add-new-habit-dialog_button {
-  button {
-    background-color: red;
-  }
+  background-color: red;
+  width: 100%;
+  color: paper-color($primary, "200");
 }

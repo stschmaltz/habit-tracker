@@ -14,7 +14,8 @@
       {{form.input type="number" label="Frequency" value=frequency onChange=(action (mut frequency)) min=1 max=7 required=true}}
     </div>
     <div class="layout-row">
-      {{#form.submit-button primary=true raised=true}}Add Habit{{/form.submit-button}}
+      {{#form.submit-button class="test" local-class="add-new-habit-dialog_button" primary=true raised=true}}Add
+      Habit{{/form.submit-button}}
     </div>
     {{/paper-form}}
 

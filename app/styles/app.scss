@@ -1,60 +1,11 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+
+$primary: "light-blue";
+$accent: "deep-orange";
+$warn: "red";
+
 @import "ember-paper";
-
-$warn: (
-  "50": #fceae8,
-  "100": #f7ccc6,
-  "200": #f2aaa0,
-  "300": #ed877a,
-  "400": #e96e5e,
-  "500": #e55441,
-  "600": #e24d3b,
-  "700": #de4332,
-  "800": #da3a2a,
-  "900": #d3291c,
-  "A100": #ffffff,
-  "A200": #ffd8d5,
-  "A400": #ffa8a2,
-  "A700": #ff9089,
-  "contrast": #ffffff
-) !default;
-
-$primary: (
-  "50": #e9f3fa,
-  "100": #c8e0f3,
-  "200": #a4cbec,
-  "300": #7fb6e4,
-  "400": #63a7de,
-  "500": #4897d8,
-  "600": #418fd4,
-  "700": #3884ce,
-  "800": #307ac8,
-  "900": #2169bf,
-  "A100": #f8fbff,
-  "A200": #c5deff,
-  "A400": #92c1ff,
-  "A700": #79b2ff,
-  "contrast": #000000
-) !default;
-
-$accent: (
-  "50": #fcfbe8,
-  "100": #f7f5c6,
-  "200": #f2eea0,
-  "300": #ede77a,
-  "400": #e9e25e,
-  "500": #e5dd41,
-  "600": #e2d93b,
-  "700": #ded432,
-  "800": #dacf2a,
-  "900": #d3c71c,
-  "A100": #ffffff,
-  "A200": #fffcd5,
-  "A400": #fff8a2,
-  "A700": #fff689,
-  "contrast": #000000
-) !default;
 
 html,
 body {
@@ -69,7 +20,7 @@ body {
 :root {
   --white: rgb(240, 240, 240);
   --black: rgb(20, 20, 20);
-  --primary-blue: #4897d8;
+  --primary-blue: #0288d1;
   --primary-yellow: #e5dd41;
   --primary-green: #44ef73;
   --primary-purple: #b35aef;
@@ -77,4 +28,8 @@ body {
 
   --primary-font: "Lato";
   --secondary-font: "Montserrat";
+}
+
+.test {
+  color: red;
 }
