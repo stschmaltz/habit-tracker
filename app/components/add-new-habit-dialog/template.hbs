@@ -4,21 +4,27 @@
       targetAttachment="center"
       translucentOverlay=true
 }}
-  <div local-class="add-new-habit-dialog_container">
-    <h2>Add a habit</h2>
-    {{#paper-form onSubmit=(action "addHabit") as |form|}}
-    <div class="layout-column">
-      <div class="layout-row flex-50">
-        {{form.input label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
-      </div>
-      {{form.input type="number" label="Frequency" value=frequency onChange=(action (mut frequency)) min=1 max=7 required=true}}
-    </div>
-    <div class="layout-row">
-      {{#form.submit-button class="test" local-class="add-new-habit-dialog_button" primary=true raised=true}}Add
-      Habit{{/form.submit-button}}
-    </div>
-    {{/paper-form}}
+    <div local-class="add-new-habit-dialog_container">
+      <h2>Add a habit</h2>
+      {{#paper-form onSubmit=(action "addHabit" habit) as |habit|}}
+        <div class="layout-column">
+          <div class="layout-row flex-50">
+            {{habit.input label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
+          </div>
+          {{#habit.select options=frequencies label="Frequency" required=true selected=habitFrequency onChange=(action (mut habitFrequency)) as |frequency|}}
+            {{frequency}}
+          {{/habit.select}}
+          {{#habit.select options=colors label="Color" required=true selected=habitColor onChange=(action (mut habitColor)) as |color|}}
+            {{color}}
+          {{/habit.select}}
+        </div>
+        <div class="layout-row">
+          {{#habit.submit-button class="test" local-class="add-new-habit-dialog_button" primary=true raised=true}}
+            Add Habit
+          {{/habit.submit-button}}
+        </div>
+      {{/paper-form}}
 
-  </div>
+    </div>
   {{/modal-dialog}}
 </div>
