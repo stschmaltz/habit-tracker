@@ -14,9 +14,19 @@
           {{#habit.select options=frequencies label="Frequency" required=true selected=habitFrequency onChange=(action (mut habitFrequency)) as |frequency|}}
             {{frequency}}
           {{/habit.select}}
-          {{#habit.select options=colors label="Color" required=true selected=habitColor onChange=(action (mut habitColor)) as |color|}}
-            {{color}}
-          {{/habit.select}}
+          {{#power-select
+            searchEnabled=false
+            options=colors
+            selected=habitColor
+            placeholder="Color"
+            onchange=(action (mut habitColor))
+            as |color|
+          }}
+            <div local-class="container">
+              <div local-class="square {{color}}"></div>
+              {{color}}
+            </div>
+          {{/power-select}}
         </div>
         <div class="layout-row">
           {{#habit.submit-button class="test" local-class="add-new-habit-dialog_button" primary=true raised=true}}

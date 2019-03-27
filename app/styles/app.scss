@@ -1,5 +1,6 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+@import "ember-power-select";
 
 $primary: "light-blue";
 $accent: "deep-orange";
@@ -33,3 +34,5 @@ body {
 .test {
   color: red;
 }
+
+@import "ember-power-select";

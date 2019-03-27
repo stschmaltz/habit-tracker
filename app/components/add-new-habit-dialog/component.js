@@ -6,7 +6,7 @@ export default Component.extend({
 
     this.frequencies = this.frequencies || [1, 2, 3, 4, 5, 6, 7];
     this.colors = this.colors || [
-      "red",
+      "red ",
       "pink",
       "purple",
       "deep-purple",
@@ -34,7 +34,8 @@ export default Component.extend({
     addHabit(habit) {
       const habitName = this.get("habitName");
       const freq = this.get("habitFrequency");
-      console.log(habitName, freq);
+      const color = this.get("habitColor");
+      console.log(habitName, freq, color);
     },
     cancel() {
       this.onClose();
