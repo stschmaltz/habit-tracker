@@ -3,19 +3,24 @@
   width: 80vw;
   padding: 1rem;
 }
-
+.add-new-habit-dialog_frequency-select {
+  margin: 1rem;
+}
+.add-new-habit-dialog_color-select {
+  margin: 1rem;
+}
 .add-new-habit-dialog_button {
   background-color: red;
   width: 100%;
   color: white;
 }
-.container {
+.add-new-habit-dialog_color-option-container {
   display: flex;
   padding: 0;
   margin: 0;
   align-items: center;
 }
-.square {
+.add-new-habit-dialog_color-option-color {
   width: 25px;
   height: 25px;
   margin-right: 0.5rem;

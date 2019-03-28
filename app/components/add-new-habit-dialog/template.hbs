@@ -7,29 +7,44 @@
     <div local-class="add-new-habit-dialog_container">
       <h2>Add a habit</h2>
       {{#paper-form onSubmit=(action "addHabit" habit) as |habit|}}
-        <div class="layout-column">
-          <div class="layout-row flex-50">
+        <div>
+          <div>
             {{habit.input label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
           </div>
-          {{#habit.select options=frequencies label="Frequency" required=true selected=habitFrequency onChange=(action (mut habitFrequency)) as |frequency|}}
-            {{frequency}}
-          {{/habit.select}}
-          {{#power-select
+          <div local-class="add-new-habit-dialog_frequency-select">
+
+            {{#power-select
             searchEnabled=false
+            options=frequencies
+            selected=habitFrequency
+            placeholder="Frequency"
+            onchange=(action (mut habitFrequency))
+            as |frequency|
+          }}
+              {{frequency}}
+            {{/power-select}}
+          </div>
+
+
+          <div local-class="add-new-habit-dialog_color-select">
+
+            {{#power-select
+            searchE     nabled=false
             options=colors
             selected=habitColor
             placeholder="Color"
             onchange=(action (mut habitColor))
             as |color|
           }}
-            <div local-class="container">
-              <div local-class="square {{color}}"></div>
-              {{color}}
-            </div>
-          {{/power-select}}
+              <div local-class="add-new-habit-dialog_color-option-container">
+                <div local-class="add-new-habit-dialog_color-option-color {{color}}"></div>
+                {{color}}
+              </div>
+            {{/power-select}}
+          </div>
         </div>
-        <div class="layout-row">
-          {{#habit.submit-button class="test" local-class="add-new-habit-dialog_button" primary=true raised=true}}
+        <div>
+          {{#habit.submit-button local-class="add-new-habit-dialog_button" primary=true raised=true}}
             Add Habit
           {{/habit.submit-button}}
         </div>
