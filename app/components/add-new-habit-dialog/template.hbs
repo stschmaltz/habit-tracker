@@ -5,11 +5,11 @@
       translucentOverlay=true
 }}
     <div local-class="add-new-habit-dialog_container">
-      <h2>Add a habit</h2>
+      <h2>Add A New Habit</h2>
       {{#paper-form onSubmit=(action "addHabit" habit) as |habit|}}
-        <div>
-          <div>
-            {{habit.input label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
+        <div local-class="add-new-habit-dialog_form-content">
+          <div local-class="add-new-habit-dialog_name-input-container">
+            {{habit.input local-class="add-new-habit-dialog_name-input" label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
           </div>
           <div local-class="add-new-habit-dialog_frequency-select">
 
@@ -29,7 +29,8 @@
           <div local-class="add-new-habit-dialog_color-select">
 
             {{#power-select
-            searchE     nabled=false
+            local-class="color-select"
+            searchEnabled=false
             options=colors
             selected=habitColor
             placeholder="Color"
@@ -43,11 +44,9 @@
             {{/power-select}}
           </div>
         </div>
-        <div>
-          {{#habit.submit-button local-class="add-new-habit-dialog_button" primary=true raised=true}}
-            Add Habit
-          {{/habit.submit-button}}
-        </div>
+        {{#habit.submit-button local-class="add-new-habit-dialog_button" primary=true raised=true}}
+          Add Habit
+        {{/habit.submit-button}}
       {{/paper-form}}
 
     </div>

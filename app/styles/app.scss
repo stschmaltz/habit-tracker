@@ -2,9 +2,12 @@
 @import "ember-modal-dialog/ember-modal-appearance";
 @import "ember-power-select";
 
-$primary: "light-blue";
+$primary: "blue";
 $accent: "deep-orange";
 $warn: "red";
+
+$button-margin: 0;
+$button-color: white;
 
 @import "ember-paper";
 

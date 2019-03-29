@@ -3,28 +3,62 @@
   width: 80vw;
   padding: 1rem;
 }
+.add-new-habit-dialog_form-content {
+  width: 100%;
+}
 .add-new-habit-dialog_frequency-select {
-  margin: 1rem;
+  margin: 2rem 0;
+  margin-top: 1rem;
 }
 .add-new-habit-dialog_color-select {
-  margin: 1rem;
+  margin: 2rem 0;
+}
+.add-new-habit-dialog_name-input-container {
+  width: 100%;
+}
+.add-new-habit-dialog_name-input {
+  width: 100%;
+  // margin: 0;
+  margin-bottom: -0.5rem;
+  padding: 0;
+}
+#add-habit_btn {
+  margin: 0;
 }
 .add-new-habit-dialog_button {
-  background-color: red;
   width: 100%;
+  margin: 0;
   color: white;
 }
+
 .add-new-habit-dialog_color-option-container {
+  width: 90%;
+
   display: flex;
   padding: 0;
   margin: 0;
   align-items: center;
 }
+.ember-power-select-selected-item {
+  padding: 0;
+  margin: 0;
+}
+.color-select {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+}
+.add-new-habit-dialog_color-option-container > span {
+  padding: 0;
+  margin: 0;
+}
+
 .add-new-habit-dialog_color-option-color {
   width: 25px;
   height: 25px;
   margin-right: 0.5rem;
 }
+
 .red {
   background-color: #f44336;
 }
