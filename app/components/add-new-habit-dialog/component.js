@@ -1,6 +1,9 @@
 import Component from "@ember/component";
+import { inject as service } from "@ember/service";
 
 export default Component.extend({
+  store: service(),
+
   init() {
     this._super(...arguments);
 
@@ -31,11 +34,18 @@ export default Component.extend({
   habitFrequency: null,
   habitColor: null,
   actions: {
-    addHabit(habit) {
+    async addHabit() {
       const habitName = this.get("habitName");
-      const freq = this.get("habitFrequency");
+      const frequency = this.get("habitFrequency");
       const color = this.get("habitColor");
-      console.log(habitName, freq, color);
+      console.log(habitName, frequency, color);
+      const newHabit = this.store.createRecord("habit", {
+        name: habitName,
+        frequency: frequency,
+        color: color
+      });
+      const response = await newHabit.save();
+      console.log(response);
     },
     cancel() {
       this.onClose();
