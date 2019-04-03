@@ -13,18 +13,22 @@
     </div>
   </div>
   {{#each model as |habit|}}
-    <div local-class="habit_container">
-      <h3>
+    <div local-class="{{habit.color}} habit_container">
+      <h2 local-class="{{habit.color}} habit-name">
         {{habit.name}}
-      </h3>
+      </h2>
       <div local-class="habit_check-container">
-        {{fa-icon "check" local-class="habit_check-icon"}}
-        {{fa-icon "check" local-class="habit_check-icon"}}
-        {{fa-icon "check" local-class="habit_check-icon"}}
-        {{fa-icon "check" local-class="habit_check-icon"}}
-        {{fa-icon "check" local-class="habit_check-icon"}}
-        {{fa-icon "check" local-class="habit_check-icon"}}
-        {{fa-icon "check" local-class="habit_check-icon"}}
+        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
+        }}
+        {{fa-icon "check" size="2x" local-class="habit_check-icon"}}
+        {{fa-icon "check" size="2x" local-class="habit_check-icon"}}
+        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
+        }}
+        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
+        }}
+        {{fa-icon "check" size="2x" local-class="habit_check-icon"}}
+        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
+        }}
       </div>
     </div>
   {{/each}}

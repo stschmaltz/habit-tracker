@@ -4,7 +4,9 @@
   padding: 0 2rem;
   border: solid 1px #222;
 }
-
+.habit-name {
+  font-weight: 700;
+}
 .habits_title-container {
   display: flex;
   align-items: center;
@@ -28,4 +30,86 @@
 }
 .habit_check-icon {
   padding: 0 0.2rem;
+}
+
+.red {
+  color: var(--color-red);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.yellow {
+  color: var(--color-yellow);
+}
+
+.pink {
+  color: var(--color-pink);
+}
+
+.purple {
+  color: var(--color-purple);
+}
+
+.deep-purple {
+  color: var(--color-deep-purple);
+}
+
+.indigo {
+  color: var(--color-indigo);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.light-blue {
+  color: var(--color-light-blue);
+}
+
+.cyan {
+  color: var(--color-cyan);
+}
+
+.teal {
+  color: var(--color-teal);
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.light-green {
+  color: var(--color-light-green);
+}
+
+.lime {
+  color: var(--color-lime);
+}
+
+.yellow {
+  color: var(--color-yellow);
+}
+
+.amber {
+  color: var(--color-amber);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.deep-orange {
+  color: var(--color-deep-orange);
+}
+
+.brown {
+  color: var(--color-brown);
+}
+.grey {
+  color: var(--color-grey);
+}
+.blue-grey {
+  color: var(--color-blue-grey);
 }

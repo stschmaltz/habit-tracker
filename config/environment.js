@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment,
     rootURL: "/",
     locationType: "auto",
-    googleFonts: ["Lato:300,400,700", "Montserrat:400"],
+    googleFonts: ["Lato:300,400,700,900", "Montserrat:400,600,700,900"],
     firebase: {
       apiKey: process.env.FIREBASE_API_KEY,
       authDomain: process.env.FIREBASE_AUTH_DOMAIN,
