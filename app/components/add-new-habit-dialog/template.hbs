@@ -1,54 +1,62 @@
 <div>
   {{#modal-dialog
-      onClose=(action "cancel")
-      targetAttachment="center"
-      translucentOverlay=true
-}}
+    onClose=(action "cancel")
+    targetAttachment="center"
+    translucentOverlay=true
+  }}
     <div local-class="add-new-habit-dialog_container">
-      <h2>Add A New Habit</h2>
+      <h2>
+        Add A New Habit
+      </h2>
       {{#paper-form onSubmit=(action "addHabit" habit) as |habit|}}
         <div local-class="add-new-habit-dialog_form-content">
           <div local-class="add-new-habit-dialog_name-input-container">
-            {{habit.input local-class="add-new-habit-dialog_name-input" label="Habit Name" value=habitName onChange=(action (mut habitName)) required=true}}
+            {{habit.input
+              local-class="add-new-habit-dialog_name-input"
+              label="Habit Name"
+              value=habitName
+              onChange=(action (mut habitName))
+              required=true
+            }}
           </div>
           <div local-class="add-new-habit-dialog_frequency-select">
-
             {{#power-select
-            searchEnabled=false
-            options=frequencies
-            selected=habitFrequency
-            placeholder="Frequency"
-            onchange=(action (mut habitFrequency))
-            as |frequency|
-          }}
+              searchEnabled=false
+              options=frequencies
+              selected=habitFrequency
+              placeholder="Frequency"
+              onchange=(action (mut habitFrequency)) as |frequency|
+            }}
               {{frequency}}
             {{/power-select}}
           </div>
-
-
           <div local-class="add-new-habit-dialog_color-select">
-
             {{#power-select
-            local-class="color-select"
-            searchEnabled=false
-            options=colors
-            selected=habitColor
-            placeholder="Color"
-            onchange=(action (mut habitColor))
-            as |color|
-          }}
+              local-class="color-select"
+              searchEnabled=false
+              options=colors
+              selected=habitColor
+              placeholder="Color"
+              onchange=(action (mut habitColor)) as |color|
+            }}
               <div local-class="add-new-habit-dialog_color-option-container">
-                <div local-class="add-new-habit-dialog_color-option-color {{color}}"></div>
+                <div
+                  local-class="add-new-habit-dialog_color-option-color
+                    {{color}}"
+                ></div>
                 {{color}}
               </div>
             {{/power-select}}
           </div>
         </div>
-        {{#habit.submit-button local-class="add-new-habit-dialog_button" primary=true raised=true}}
+        {{#habit.submit-button
+          local-class="add-new-habit-dialog_button"
+          primary=true
+          raised=true
+        }}
           Add Habit
         {{/habit.submit-button}}
       {{/paper-form}}
-
     </div>
   {{/modal-dialog}}
 </div>

@@ -1,22 +1,23 @@
 <div local-class="habits_container">
   <div local-class="habits_title-container">
-    <h1>Habits</h1>
+    <h1>
+      Habits
+    </h1>
     <div local-class="habit_check-container">
-
-      <DateBlock local-class="habit_date" @month="mar" @day="10"></DateBlock>
-      <DateBlock local-class="habit_date" @month="mar" @day="11"></DateBlock>
-      <DateBlock local-class="habit_date" @month="mar" @day="12"></DateBlock>
-      <DateBlock local-class="habit_date" @month="mar" @day="13"></DateBlock>
-      <DateBlock local-class="habit_date" @month="mar" @day="14"></DateBlock>
-      <DateBlock local-class="habit_date" @month="mar" @day="15"></DateBlock>
+      <DateBlock local-class="habit_date" @month="mar" @day="10" />
+      <DateBlock local-class="habit_date" @month="mar" @day="11" />
+      <DateBlock local-class="habit_date" @month="mar" @day="12" />
+      <DateBlock local-class="habit_date" @month="mar" @day="13" />
+      <DateBlock local-class="habit_date" @month="mar" @day="14" />
+      <DateBlock local-class="habit_date" @month="mar" @day="15" />
     </div>
-
   </div>
   {{#each model as |habit|}}
     <div local-class="habit_container">
-      <h3>{{habit.name}}</h3>
+      <h3>
+        {{habit.name}}
+      </h3>
       <div local-class="habit_check-container">
-
         {{fa-icon "check" local-class="habit_check-icon"}}
         {{fa-icon "check" local-class="habit_check-icon"}}
         {{fa-icon "check" local-class="habit_check-icon"}}
@@ -26,6 +27,5 @@
         {{fa-icon "check" local-class="habit_check-icon"}}
       </div>
     </div>
-
   {{/each}}
 </div>

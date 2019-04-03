@@ -1,11 +1,12 @@
 <div local-class="nav-bar__container" id="main-navbar">
-  <h2 local-class="nav-bar__title">Habit Tracker</h2>
+  <h2 local-class="nav-bar__title">
+    Habit Tracker
+  </h2>
   <div local-class="nav-bar__icon-container">
-
     {{fa-icon "plus" local-class="nav-bar__plus" click=(action "toggleModal")}}
     {{fa-icon "bars" local-class="nav-bar__hamburger"}}
     {{#if isShowingModal}}
-      {{add-new-habit-dialog onClose=(action "toggleModal") }}
+      {{add-new-habit-dialog onClose=(action "toggleModal")}}
     {{/if}}
   </div>
 </div>
