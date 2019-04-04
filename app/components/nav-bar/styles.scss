@@ -13,7 +13,7 @@
   align-items: center;
   background-color: var(--color-blue);
   color: var(--color-white);
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 .nav-bar__title {
   font-family: var(--primary-font);
@@ -24,10 +24,8 @@
 }
 
 .nav-bar__hamburger {
-  font-size: 2rem;
-  padding: 0.5rem;
+  // padding: 0.5rem;
 }
 .nav-bar__plus {
-  font-size: 2rem;
-  padding: 0.5rem;
+  margin-right: 1.5rem;
 }

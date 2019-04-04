@@ -40,7 +40,7 @@ export default Component.extend({
       const color = this.get("habitColor");
       console.log(habitName, frequency, color);
       const newHabit = this.store.createRecord("habit", {
-        name: habitName,
+        name: habitName.charAt(0).toUpperCase() + habitName.slice(1),
         frequency: frequency,
         color: color
       });

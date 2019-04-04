@@ -3,7 +3,7 @@
     <h1>
       Habits
     </h1>
-    <div local-class="habit_check-container">
+    <div local-class="habit_date-container">
       <DateBlock local-class="habit_date" @month="mar" @day="10" />
       <DateBlock local-class="habit_date" @month="mar" @day="11" />
       <DateBlock local-class="habit_date" @month="mar" @day="12" />
@@ -17,18 +17,14 @@
       <h2 local-class="{{habit.color}} habit-name">
         {{habit.name}}
       </h2>
-      <div local-class="habit_check-container">
-        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
-        }}
-        {{fa-icon "check" size="2x" local-class="habit_check-icon"}}
-        {{fa-icon "check" size="2x" local-class="habit_check-icon"}}
-        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
-        }}
-        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
-        }}
-        {{fa-icon "check" size="2x" local-class="habit_check-icon"}}
-        {{fa-icon "square" size="2x" prefix="far" local-class="habit_check-icon"
-        }}
+      <div local-class="habit_container">
+        {{fa-icon "square" size="1x" prefix="far" local-class="habit_icon"}}
+        {{fa-icon "check" size="1x" local-class="habit_icon"}}
+        {{fa-icon "check" size="1x" local-class="habit_icon"}}
+        {{fa-icon "square" size="1x" prefix="far" local-class="habit_icon"}}
+        {{fa-icon "square" size="1x" prefix="far" local-class="habit_icon"}}
+        {{fa-icon "check" size="1x" local-class="habit_icon"}}
+        {{fa-icon "square" size="1x" prefix="far" local-class="habit_icon"}}
       </div>
     </div>
   {{/each}}

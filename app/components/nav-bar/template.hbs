@@ -3,8 +3,13 @@
     Habit Tracker
   </h2>
   <div local-class="nav-bar__icon-container">
-    {{fa-icon "plus" local-class="nav-bar__plus" click=(action "toggleModal")}}
-    {{fa-icon "bars" local-class="nav-bar__hamburger"}}
+    {{fa-icon
+      "plus"
+      size="2x"
+      local-class="nav-bar__plus"
+      click=(action "toggleModal")
+    }}
+    {{fa-icon "bars" size="2x" local-class="nav-bar__hamburger"}}
     {{#if isShowingModal}}
       {{add-new-habit-dialog onClose=(action "toggleModal")}}
     {{/if}}
