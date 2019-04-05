@@ -8,24 +8,16 @@
 }
 .habits_title-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 100%;
 }
-.habit_date-container {
-  width: 63%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .habit_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.habit_date {
-  // padding: 0 0.15rem;
-}
 .habit_icon {
   padding: 0 0.2rem;
   font-size: 2rem;

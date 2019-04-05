@@ -1,16 +1,6 @@
 <div local-class="habits_container">
   <div local-class="habits_title-container">
-    <h1>
-      Habits
-    </h1>
-    <div local-class="habit_date-container">
-      <DateBlock local-class="habit_date" @month="mar" @day="10" />
-      <DateBlock local-class="habit_date" @month="mar" @day="11" />
-      <DateBlock local-class="habit_date" @month="mar" @day="12" />
-      <DateBlock local-class="habit_date" @month="mar" @day="13" />
-      <DateBlock local-class="habit_date" @month="mar" @day="14" />
-      <DateBlock local-class="habit_date" @month="mar" @day="15" />
-    </div>
+    {{index/date-bar}}
   </div>
   {{#each model as |habit|}}
     <div local-class="{{habit.color}} habit_container">
